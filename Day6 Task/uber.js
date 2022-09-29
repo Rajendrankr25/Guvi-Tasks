@@ -8,6 +8,6 @@ class Uber {
         this.kms=kms;
     }
 }
-var ride1=new Uber("Innova", "MUV", "7-Seater", "30");
-var ride2=new Uber("Etios", "Sedan", "4-Seater", "200");
+var ride1=new Uber("Innova", "MUV", "7-Seater", 30);
+var ride2=new Uber("Etios", "Sedan", "4-Seater", 200);
 console.log(ride1);
