@@ -1,0 +1,24 @@
+form{
+    margin: 30px 30px;
+}
+body{
+    background-color: whitesmoke;
+}
+.required label:after{
+    color: red;
+    content: ' *';
+    display: inline;
+}
+label{
+    font-weight: bold;
+}
+.checked{
+    color: orange;
+}
+table{
+    text-align: center;
+    padding: 20px;
+}
+td{
+    padding: 10px 20px;
+}
