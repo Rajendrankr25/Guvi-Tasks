@@ -1,0 +1,17 @@
+h2{
+    text-align: center;
+    margin: 20px;
+    padding: 30px;
+}
+body{
+    background-color: gray;
+}
+.container{
+    background-color: whitesmoke;
+}
+form{
+    margin: 50px 20px;
+}
+label{
+    font-weight: bold;
+}
