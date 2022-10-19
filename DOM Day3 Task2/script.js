@@ -4,8 +4,7 @@ request.open("GET", "https://raw.githubusercontent.com/Rajavasanthan/jsondata/ma
 request.send();
 request.onload = function () {
     var res = JSON.parse(request.response);
-    //console.log(res);
-
+    
     function tag(tgname) {
         var ele = document.createElement(tgname);
         return ele;
