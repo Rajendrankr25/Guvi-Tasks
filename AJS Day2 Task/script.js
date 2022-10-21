@@ -3,18 +3,18 @@
 var result = fetch("https://restcountries.com/v2/all")
 .then((data)=>data.json())
 .then((data1)=> {
-    var div1 = document.createElement("div");
-    div1.setAttribute("class","container");
-    var div2 = document.createElement("div");
-    div2.setAttribute("class","row");
+    var container = document.createElement("div");
+    container.setAttribute("class","container");
+    var row = document.createElement("div");
+    row.setAttribute("class","row");
     var h1 = document.createElement("h1");
     h1.innerHTML="Restcountries using Fetch API";
-    div1.append(h1,div2);
-    document.body.append(div1);
+    container.append(h1,row);
+    document.body.append(container);
     for(var i=0;i<data1.length;i++){
-        var div3 = document.createElement("div");
-        div3.setAttribute("class","col-lg-4");
-        div3.innerHTML=`<div class="smallbox">
+        var col = document.createElement("div");
+        col.setAttribute("class","col-lg-4");
+        col.innerHTML=`<div class="smallbox">
         <div class="card">
         <img src="${data1[i].flag}" class="card-img-top" alt="flag" height="200px" width="100px">
         <div class="card-body">
@@ -29,7 +29,7 @@ var result = fetch("https://restcountries.com/v2/all")
         </div>
         </div>
       </div>`
-      div2.append(div3);
+      row.append(col);
     }
 })
 .catch((error)=>console.log(error));
