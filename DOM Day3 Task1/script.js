@@ -49,7 +49,8 @@ function txtArea(tagname, attrname, attrvalue, attrname1, attrvalue1, attrname2,
     return ele;
 }
 function submitted(){
-    var fn = document.getElementById("pincode").value;
+    var fn = document.getElementById("first-name").value;
+    var ln = document.getElementById("last-name")
     var tr2 = document.createElement("tr");
     var td1 = document.createElement("td");
     td1.innerHTML=fn;
@@ -67,7 +68,7 @@ var div3 = tagWithClass("div", "class", "col-md-3");
 var div4 = tagWithClass("div", "class", "col-md-9");
 var h1 = tagWithClassContent("h1", "id", "title", "Form Submission");
 var p1 = tagWithClassContent("p", "id", "description", "DOM Manipulation with Forms");
-var form = tagWithClass("form", "id", "form");
+var form = tagWithClassId("form", "id", "form","action","Onsubmit");
 div.append(div1);
 div1.append(div2);
 div2.append(div3, div4);
