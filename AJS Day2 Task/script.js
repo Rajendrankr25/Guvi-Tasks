@@ -25,11 +25,25 @@ var result = fetch("https://restcountries.com/v2/all")
           <span class="card-text">Longitude: </span>
           <span class="card-text">Country Code: ${data1[i].alpha3Code}</span>
           <br>
-          <a href="#" class="btn btn-primary">Click for Weather</a>
+          <button class="btn btn-primary" Onclick="opendata()">Click for Weather</button>
         </div>
         </div>
       </div>`
+      var name = data1[i].name;
+      var latlong = data1[i].latlng;
+      //console.log(latlong);
+      opendata(name,...latlong);
       row.append(col);
     }
 })
 .catch((error)=>console.log(error));
+
+async function opendata(name,lat,lon){
+  try {
+    let res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=443b3318c37d5d0e758a46abc8e96f7b`);
+    let res1 = await res.json();
+    console.log(`Country name:${name}, Temp:${res1.main.temp}`);
+  } catch (error) {
+    console.log(error);
+  }
+}

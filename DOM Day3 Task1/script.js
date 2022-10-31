@@ -48,17 +48,6 @@ function txtArea(tagname, attrname, attrvalue, attrname1, attrvalue1, attrname2,
     ele.setAttribute(attrname3, attrvalue3);
     return ele;
 }
-function submitted(){
-    var fn = document.getElementById("first-name").value;
-    var ln = document.getElementById("last-name")
-    var tr2 = document.createElement("tr");
-    var td1 = document.createElement("td");
-    td1.innerHTML=fn;
-    tr2.append(td1);
-    tbody.append(tr2);
-    console.log(fn);
-
-}
 
 //Form contents;
 var div = tagWithClass("div", "class", "box");
@@ -68,7 +57,7 @@ var div3 = tagWithClass("div", "class", "col-md-3");
 var div4 = tagWithClass("div", "class", "col-md-9");
 var h1 = tagWithClassContent("h1", "id", "title", "Form Submission");
 var p1 = tagWithClassContent("p", "id", "description", "DOM Manipulation with Forms");
-var form = tagWithClassId("form", "id", "form","action","Onsubmit");
+var form = tagWithClass("form", "id", "form");
 div.append(div1);
 div1.append(div2);
 div2.append(div3, div4);
@@ -131,7 +120,7 @@ var inp12 = tagWithClassIdPlace("input", "type", "text", "id", "country", "place
 var br25 = tag("br");
 var br26 = tag("br");
 var btn1 = tagWithClassIdContent("button", "class", "btn btn-primary", "id", "submit", "Submit");
-btn1.addEventListener("click",submitted);
+btn1.addEventListener("click",genderChoose);
 var br27 = tag("br");
 var br28 = tag("br");
 
@@ -157,8 +146,27 @@ var thd6 = tagWithClassContent("th", "scope", "col", "Food");
 var thd7 = tagWithClassContent("th", "scope", "col", "State");
 var thd8 = tagWithClassContent("th", "scope", "col", "Country");
 tr1.append(thd1, thd2, thd3, thd4, thd5, thd6, thd7, thd8);
-
-
-
 document.body.append(div);
 
+//Interaction;
+
+function genderChoose(){
+    if(male.checked){
+        let res = document.getElementById("male").value;
+        console.log(res);
+    } else {
+        let res1 = document.getElementById("female").value;
+        console.log(res1);
+    }
+}
+
+function dataRetrive(){
+    var fn = document.getElementById("first-name");
+    var ln = document.getElementById("last-name");
+    var adrs = document.getElementById("address");
+    var pin = document.getElementById("pincode");
+    var gndr = genderChoose();
+    return gndr;
+
+}
+//sconsole.log(gndr);
