@@ -6,7 +6,7 @@ h1{
     font-size: 80px;
 }
 body{
-    background-image: url(./beerMug.jpg);
+    background-image: url(./assets/beerMug.jpg);
     background-repeat:repeat;
     background-attachment:fixed;
     background-size: 100% 100%;
